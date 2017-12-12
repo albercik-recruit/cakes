@@ -1,8 +1,7 @@
 <h1>Cake List:</h1>
-<!--<a routerLink="/cake-details">Cake Details link</a>-->
-
 <div>
-  <div *ngFor="let cake of cakes">
+  <div *ngFor="let cake of cakes" class="cake-row">
+    <img [src]="cake.imageUrl">
     <span>{{cake.name}}</span>
   </div>
 </div>
