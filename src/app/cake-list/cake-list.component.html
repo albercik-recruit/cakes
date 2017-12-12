@@ -1,6 +1,12 @@
 <h1>Cake List:</h1>
+
+<form [formGroup]="newCakeForm">
+  <input id="imageUrl" placeholder="Image URL" formControlName="imageUrl" />
+  <button (click)="addNewCake()">Add new cake</button>
+</form>
+
 <div>
-  <div *ngFor="let cake of cakes" class="cake-row">
+  <div *ngFor="let cake of cakes" class="cake-row" (click)="navigateToCakeEdit(cake.id)">
     <img [src]="cake.imageUrl">
     <span>{{cake.name}}</span>
   </div>

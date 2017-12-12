@@ -1,2 +1,24 @@
 <h1>Cake Details</h1>
-<a routerLink="/cake-list">Cake List link</a>
+<a routerLink="/cake-list">< back to cake list</a>
+
+<form *ngIf="cakeForm" [formGroup]="cakeForm">
+  <div class="row">
+    <label for="name">Cake name:</label>
+    <input id="name" placeholder="Name" formControlName="name" />
+  </div>
+
+  <div class="row">
+    <label for="name">Comment</label>
+    <textarea rows="4" placeholder="Comment" formControlName="comment"></textarea>
+  </div>
+
+  <div class="row">
+    <label for="yumFactor">Yum factor</label>
+    <input id="yumFactor" placeholder="Yum factor" formControlName="yumFactor" type="number" min="1" max="5" />
+  </div>
+
+  <button (click)="persistCake()">Save Cake</button>
+
+  <label>Preview:</label>
+  <img [src]="cakeForm.controls.imageUrl.value">
+</form>
