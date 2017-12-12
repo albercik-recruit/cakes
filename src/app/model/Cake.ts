@@ -1,7 +1,7 @@
 
 export class Cake {
   id: string;
-  name: string = 'unicorn 1';
+  name: string = '';
   comment: string = '';
   yumFactor: number = 0;
   imageUrl: string = '';
