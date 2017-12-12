@@ -1,2 +1,8 @@
-<h1>Cake List</h1>
-<a routerLink="/cake-details">Cake Details link</a>
+<h1>Cake List:</h1>
+<!--<a routerLink="/cake-details">Cake Details link</a>-->
+
+<div>
+  <div *ngFor="let cake of cakes">
+    <span>{{cake.name}}</span>
+  </div>
+</div>
